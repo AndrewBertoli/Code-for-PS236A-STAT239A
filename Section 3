@@ -1,4 +1,5 @@
-# Permutation Inference: How rare was the data we got assuming that the treatment had no effect? We will first run the analysis with a treatment effect of 1.
+# Permutation Inference: How rare was the data we got assuming that the treatment had no effect? We will first run the
+# analysis with a treatment effect of 1.
 
 t=rnorm(50,1,2)
 c=rnorm(50,0,2)
@@ -83,7 +84,8 @@ wilcox.test(t, c, paired=TRUE)
 
 # Propensity Score Matching
 
-# Imagine that the probability that a person eats fast food is determined by their age, gender, whether their parents eat fast food, and their stress level. We observe everything but their stress level.
+# Imagine that the probability that a person eats fast food is determined by their age, gender, whether their 
+# parents eat fast food, and their stress level. We observe everything but their stress level.
 
 Age=sample(25:90,100,replace=TRUE)
 
@@ -111,7 +113,8 @@ Heart.Disease=rbern(100,Prob.Heart.Disease)
 data=data.frame(cbind(Age,Gender,Parents.Eaters,Treat,Heart.Disease))
 
 
-# Now we have our data. This is where the problem would start if we were doing a study about this. So first, we will estimate the probability of treatment given our covariates (Age,Gender,Parents.Eaters)
+# Now we have our data. This is where the problem would start if we were doing a study about this. So first, 
+# we will estimate the probability of treatment given our covariates (Age,Gender,Parents.Eaters)
 
 pscore=glm(Treat ~ Age + Gender + Parents.Eaters, family= binomial(link=logit),data=data)$fitted.values
 
