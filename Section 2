@@ -63,7 +63,8 @@ estimates[i]=summary(model.with.X.error)$coef[2,1]
 }
 
 pdf("XErrorHistogram.pdf")
-hist(estimates,xlim=c(-summary(model)$coef[2,1]-1,summary(model)$coef[2,1]+1),freq=FALSE, col="darkslategray1", main="Histogram of Estimates with Error in X")
+hist(estimates,xlim=c(-summary(model)$coef[2,1]-1,summary(model)$coef[2,1]+1),freq=FALSE, col="darkslategray1",
+main="Histogram of Estimates with Error in X")
 abline(v=summary(model)$coef[2,1],col="blue")
 text(summary(model)$coef[2,1]-0.2, 0.3,"True Value",srt=90,col="blue")
 dev.off()
@@ -97,7 +98,8 @@ estimates[i]=summary(model.with.Y.error)$coef[2,1]
 
 
 pdf("YErrorHistogram.pdf")
-hist(estimates,xlim=c(-summary(model)$coef[2,1]-1,summary(model)$coef[2,1]+1),freq=FALSE, col="darkslategray1", main="Histogram of Estimates with Error in Y")
+hist(estimates,xlim=c(-summary(model)$coef[2,1]-1,summary(model)$coef[2,1]+1),freq=FALSE, col="darkslategray1",
+main="Histogram of Estimates with Error in Y")
 abline(v=summary(model)$coef[2,1],col="blue")
 text(summary(model)$coef[2,1]-0.2, 0.3,"True Value",srt=90,col="blue")
 dev.off()
