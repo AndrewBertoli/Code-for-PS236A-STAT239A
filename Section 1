@@ -8,7 +8,9 @@ Success.Vector=rep(0,100000000) # This will be a vector of that codes successes 
 
 for(i in 1:100000000){
 
-deck=sample(c(rep(2:14,4), 52, replace=FALSE) # We are labeling Jack=11, Queen=12's, King=13, and Ace=14. This line of code produces a well shuffled deck of cards (without suits).
+deck=sample(c(rep(2:14,4), 52, replace=FALSE) 
+
+# We are labeling Jack=11, Queen=12's, King=13, and Ace=14. This line of code produces a well shuffled deck of cards (without suits).
 
 seven=which(deck==7)
 five=which(deck[seven+1]==5)
